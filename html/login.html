@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>LogIn</title>
+</head>
+<body>
+    <div id="login-card-container">
+        <div class="login-card"> <!-- This is the login form -->
+            <header class="container">
+                <h1>Acceso al Sistema <u> ARGEUS </u></h1>
+                <hr>
+            </header>
+            <section class="body container">
+                <form action="/login" method="POST">
+                    <input type="text" name="username" placeholder="Usuario" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <p id="forgot-password"><a href="">¿Olvidaste tu contraseña?</a></p>
+                    <div class="checkbox">
+                        <input type="checkbox" name="remember-me" id="remember-me">
+                        <label for="remember-me">Recuérdame</label>
+                    </div>
+                </form>
+            </section>
+            <footer>
+                <p class="container" class="new-account" id="new-account">¿No tienes una cuenta? <button id="btn_new-account" class="new-account"> Registrate ahora mismo. </button></p>
+                <p class="terms-and-conditions container">
+                    Al hacer clic en "Ingresar", aceptas los <a href="">Términos y Condiciones</a> y la <a href="">Política de Privacidad</a> de ARGEUS.
+                </p>
+            </footer>
+        </div>
+        <button type="submit" class="submit-button">Ingresar</button>
+    </div>
+
+    <div id="register-card-container"> <!-- This is the register form, initially hidden -->
+        <div class="login-card">
+            <header class="container">
+                <h1>Registro al Sistema <u> ARGEUS </u></h1>
+                <hr>
+            </header>
+            <section class="body container">
+                <form action="/login" method="POST">
+                    <input type="text" name="username" placeholder="Usuario" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <input type="password" name="confirm-password" placeholder="Confirmar Contraseña" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <div class="checkbox">
+                        <input type="checkbox" name="remember-me" id="remember-me">
+                        <label for="remember-me">Recuérdame</label>
+                    </div>
+                </form>
+            </section>
+            <p class="container" id="new-account">¿Ya tienes una cuenta? <button id="btn_old-account" class="new-account"> Inicia sesión ahora mismo. </button></p>
+            <p class="terms-and-conditions container">
+                Al hacer clic en "Registrarse", aceptas los <a href="">Términos y Condiciones</a> y la <a href="">Política de Privacidad</a> de ARGEUS.
+            </p>
+        </div>
+        <button type="button" class="submit-button">Registrarse</button>
+    </div>
+
+
+    <script src="../js/loginRegister.js"></script>
+</body>
+</html>
